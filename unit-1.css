@@ -219,3 +219,77 @@ dialog.grammar-tips-dialog::backdrop{background:rgba(24,53,75,.55);-webkit-backd
 .contraction-list li:before{content:counter(c);display:grid;place-items:center;flex-shrink:0;width:28px;height:28px;border-radius:8px;background:rgba(36,79,112,.1);color:var(--primary);font-size:.95rem;font-weight:850}
 .contraction-arrow{color:var(--gold2);font-weight:850}
 .contraction-short{color:var(--primary)}
+
+/* ===== Grammar worksheet (Lesson 1A) ===== */
+.worksheet{margin-top:22px;padding:clamp(16px,3vw,26px);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:20px;background:#fff}
+.ws-head{display:grid;gap:6px;margin-bottom:6px}
+.ws-kicker{font-size:.8rem;font-weight:850;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2)}
+.ws-head h3{margin:0;font-size:clamp(1.4rem,3.4vw,1.8rem);letter-spacing:-.02em;line-height:1.15}
+.ws-head h3 span{color:var(--gold2)}
+.ws-head p{margin:0;font-size:1rem;color:var(--muted)}
+.ws-meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:10px;margin:14px 0}
+.ws-meta label{display:grid;gap:4px;font-size:.92rem;font-weight:800}
+.ws-field{min-height:44px;padding:8px 12px;border:1px solid #BFD1DF;border-radius:10px;background:#F0F7FC;color:var(--text);font:inherit;font-size:1rem}
+.ws-field:disabled{opacity:1;color:var(--text);background:#EEF3F7;-webkit-text-fill-color:var(--text)}
+.ws-field:focus-visible,.ws-btn:focus-visible,.ws-check input:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.ws-wide{width:100%}
+.ws-inline{width:auto;min-width:5.5rem;margin:0 2px}
+.ws-grow{width:min(100%,16rem)}
+.ws-summary{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;margin:6px 0 4px;padding:12px 14px;border:1px solid #E8D9A8;border-radius:14px;background:#FBF5E0}
+.ws-total{margin:0;font-size:1.05rem;font-weight:700}
+.ws-total strong{color:var(--primary);font-size:1.2rem}
+
+.ws-section{margin-top:16px;padding:clamp(14px,2.5vw,20px);border:1px solid var(--line);border-radius:16px;background:#F8FBFE}
+.ws-sec-head{display:flex;gap:12px;align-items:flex-start;margin-bottom:12px}
+.ws-letter{display:grid;place-items:center;flex-shrink:0;width:34px;height:34px;border-radius:10px;background:var(--gold);color:#fff;font-weight:850;font-size:1rem}
+.ws-sec-head h4{margin:0 0 4px;font-size:1.15rem;line-height:1.3}
+.ws-sec-head p{margin:0;font-size:.98rem;color:var(--muted)}
+.ws-example{margin:0 0 12px;padding:10px 12px;border:1px dashed #BFD1DF;border-radius:12px;background:#fff;font-size:1.02rem}
+.ws-list{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.ws-item{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;align-items:start;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.ws-num{display:grid;place-items:center;width:28px;height:28px;margin-top:2px;border-radius:8px;background:rgba(36,79,112,.1);color:var(--primary);font-size:.92rem;font-weight:850}
+.ws-body{display:grid;gap:8px;min-width:0}
+.ws-line{margin:0;font-size:1.1rem;line-height:1.9;overflow-wrap:anywhere}
+.ws-wrong-text{font-weight:700;color:#B3402A}
+.ws-words{display:flex;flex-wrap:wrap;gap:6px}
+.ws-word{padding:4px 12px;border:1px solid #BFD1DF;border-radius:8px;background:#F0F7FC;font-weight:800}
+.ws-choice{display:inline-flex;flex-wrap:wrap;gap:6px;vertical-align:middle}
+.ws-choice label{position:relative;display:block}
+.ws-choice input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
+.ws-choice span{display:block;min-width:58px;min-height:44px;padding:10px 14px;border:1px solid #BFD1DF;border-radius:10px;background:#F0F7FC;font-size:1rem;font-weight:800;text-align:center;line-height:1.3}
+.ws-choice input:checked+span{border-color:var(--primary);background:rgba(36,79,112,.12);color:var(--primary)}
+.ws-choice input:focus-visible+span{outline:2px solid var(--gold);outline-offset:2px}
+.ws-choice input:disabled{cursor:default}
+.ws-fb{font-size:.92rem;font-weight:800}
+.ws-fb:empty{display:none}
+.ws-item.is-correct{border-color:#B7DCCB;background:#EAF6F0}
+.ws-item.is-correct .ws-fb{color:#1F7A56}
+.ws-item.is-wrong{border-color:#EBC3BA;background:#FBEDEA}
+.ws-item.is-wrong .ws-fb{color:#B3402A}
+.ws-item.is-shown{border-color:#E8D9A8;background:#FBF5E0}
+.ws-item.is-shown .ws-fb{color:var(--gold2)}
+
+.ws-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.ws-btn{min-height:44px;padding:0 16px;border:1px solid #BFD1DF;border-radius:12px;background:#fff;color:var(--primary);font:inherit;font-size:.95rem;font-weight:800;cursor:pointer}
+.ws-btn:hover{border-color:var(--gold)}
+.ws-btn-primary{border-color:var(--primary);background:var(--primary);color:#fff}
+.ws-btn-primary:hover{background:#1c3f5b;border-color:#1c3f5b}
+.ws-score{min-height:1.4em;margin:10px 0 0;font-size:1rem;font-weight:800;color:var(--primary)}
+.ws-score:empty{display:none}
+
+.ws-model{margin:0 0 12px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.ws-model p{margin:0 0 4px;font-size:1.05rem}
+.ws-model p:last-child{margin-bottom:0}
+.ws-check{display:flex;flex-wrap:wrap;align-items:center;gap:10px;min-height:44px;cursor:pointer}
+.ws-check input{width:22px;height:22px;margin:0;accent-color:var(--primary);flex-shrink:0}
+.ws-check .ws-line{flex:1;min-width:0;line-height:1.5}
+.ws-check-note{font-size:.85rem;font-weight:700;color:var(--muted)}
+.ws-remember{margin-top:16px;padding:14px 16px;border:1px solid #E8D9A8;border-radius:14px;background:#FBF5E0}
+.ws-remember h4{margin:0 0 8px;font-size:1.1rem}
+.ws-remember ul{margin:0;padding-left:1.2rem;font-size:1.05rem;line-height:1.8}
+.ws-important{margin:10px 0 0;font-size:1.02rem}
+@media(max-width:480px){.ws-item{padding:10px}.ws-inline{min-width:4.8rem}.ws-actions .ws-btn{flex:1 1 auto}}
+/* keep focused worksheet fields clear of the sticky section bar */
+.ws-item,.ws-field,.ws-choice input{scroll-margin-top:96px;scroll-margin-bottom:24px}
+.ws-item.is-empty{border-color:#E8D9A8;background:#FFFDF5}
+.ws-item.is-empty .ws-fb{color:var(--muted)}
