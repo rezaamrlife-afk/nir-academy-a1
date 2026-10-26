@@ -137,37 +137,185 @@
       <p><strong>c</strong> In pairs, practice the conversations.</p>
     </div>
 
-    <div class="activity-card grammar-activity">
-      <h3 class="block-title">GRAMMAR · verb be (singular): I and you</h3>
-      <p><strong>a</strong> Write <strong>I</strong> or <strong>You</strong> in photos 1 and 2.</p>
+    <!-- ============ GRAMMAR: VERB BE ============ -->
+    <div class="activity-card grammar-activity" id="grammar-activity">
 
-      <figure class="grammar-image">
-        <img
-          src="images/unit-1/image2.png"
-          alt="Grammar activity: Verb be, I and you"
-          loading="lazy"
-          style="width:100%;height:auto;display:block;border-radius:12px;"
-        >
-      </figure>
+      <div class="grammar-heading">
+        <span class="grammar-kicker">GRAMMAR · A1</span>
+        <h3>Verb be: <span>I</span> and <span>you</span></h3>
+        <p>Learn the rule, explore examples and practise.</p>
+      </div>
 
-      <p>
-        <label for="grammar-photo-1"><strong>1.</strong></label>
-        <select id="grammar-photo-1">
-          <option value="">Choose an answer</option>
-          <option value="I">I</option>
-          <option value="You">You</option>
-        </select>
-      </p>
+      <button
+        type="button"
+        class="grammar-tips-trigger"
+        id="openGrammarTips"
+        aria-haspopup="dialog"
+        aria-controls="grammarTipsDialog"
+      >
+        <span class="grammar-tip-icon" aria-hidden="true">✦</span>
+        <span class="grammar-button-copy">
+          <strong>Grammar Tips &amp; Examples</strong>
+          <small>Rules, examples and helpful hints</small>
+        </span>
+        <span class="grammar-button-arrow" aria-hidden="true">↗</span>
+      </button>
 
-      <p>
-        <label for="grammar-photo-2"><strong>2.</strong></label>
-        <select id="grammar-photo-2">
-          <option value="">Choose an answer</option>
-          <option value="I">I</option>
-          <option value="You">You</option>
-        </select>
-      </p>
+      <div class="grammar-task">
+        <div class="grammar-task-heading">
+          <span class="grammar-task-letter">a</span>
+          <div>
+            <h4>Look and choose</h4>
+            <p>Write <strong>I</strong> or <strong>You</strong> in photos 1 and 2.</p>
+          </div>
+        </div>
+
+        <figure class="grammar-image">
+          <img
+            src="images/unit-1/image2.png"
+            alt="Picture for the grammar exercise: I and you"
+            loading="lazy"
+          >
+        </figure>
+
+        <div class="grammar-answers">
+          <label class="grammar-answer" for="grammar-photo-1">
+            <span class="grammar-answer-number">1</span>
+            <span class="grammar-answer-label">Photo 1</span>
+            <select id="grammar-photo-1" name="grammar-photo-1">
+              <option value="">Choose...</option>
+              <option value="I">I</option>
+              <option value="You">You</option>
+            </select>
+          </label>
+
+          <label class="grammar-answer" for="grammar-photo-2">
+            <span class="grammar-answer-number">2</span>
+            <span class="grammar-answer-label">Photo 2</span>
+            <select id="grammar-photo-2" name="grammar-photo-2">
+              <option value="">Choose...</option>
+              <option value="I">I</option>
+              <option value="You">You</option>
+            </select>
+          </label>
+        </div>
+      </div>
     </div>
+
+    <!-- Grammar Tips Modal -->
+    <dialog
+      id="grammarTipsDialog"
+      class="grammar-tips-dialog"
+      aria-labelledby="grammarTipsTitle"
+    >
+      <div class="grammar-modal-header">
+        <div class="grammar-modal-brand">
+          <span class="grammar-modal-symbol">N</span>
+          <span>NIR Academy <small>ENGLISH GRAMMAR</small></span>
+        </div>
+
+        <button
+          type="button"
+          class="grammar-tips-close"
+          id="closeGrammarTips"
+          aria-label="Close grammar tips"
+        >×</button>
+      </div>
+
+      <div class="grammar-modal-body">
+        <span class="grammar-modal-level">A1 BEGINNER · GRAMMAR GUIDE</span>
+        <h2 id="grammarTipsTitle">Verb be: I and you</h2>
+        <p class="grammar-modal-intro">
+          Use <strong>am</strong> with <strong>I</strong> and
+          <strong>are</strong> with <strong>you</strong>.
+        </p>
+
+        <div class="grammar-rule-grid">
+          <article class="grammar-rule-card">
+            <span class="grammar-rule-number">01</span>
+            <h3>I + am</h3>
+            <p class="grammar-formula">I <strong>am</strong> ...</p>
+            <div class="grammar-example">
+              <span class="grammar-example-label">EXAMPLE</span>
+              <p>I am a student.</p>
+              <p class="grammar-contraction">I'm a student.</p>
+            </div>
+            <p class="grammar-explanation">
+              <strong>I'm</strong> is the short form of <strong>I am</strong>.
+            </p>
+          </article>
+
+          <article class="grammar-rule-card">
+            <span class="grammar-rule-number">02</span>
+            <h3>You + are</h3>
+            <p class="grammar-formula">You <strong>are</strong> ...</p>
+            <div class="grammar-example">
+              <span class="grammar-example-label">EXAMPLE</span>
+              <p>You are a student.</p>
+              <p class="grammar-contraction">You're a student.</p>
+            </div>
+            <p class="grammar-explanation">
+              <strong>You're</strong> is the short form of <strong>you are</strong>.
+            </p>
+          </article>
+        </div>
+
+        <section class="grammar-modal-section">
+          <h3><span>03</span> Ask a question</h3>
+          <div class="grammar-dialogue">
+            <p><strong>A:</strong> Are you Helen?</p>
+            <p><strong>B:</strong> Yes, I am.</p>
+            <p><strong>B:</strong> No, I'm not.</p>
+          </div>
+          <p class="grammar-explanation">
+            Put <strong>Are</strong> before <strong>you</strong> to make a question.
+          </p>
+        </section>
+
+        <section class="grammar-modal-section grammar-common-mistakes">
+          <h3><span>04</span> Remember!</h3>
+          <div class="grammar-correct-row">
+            <span class="grammar-status-correct">✓</span>
+            <span>I am / I'm</span>
+            <span class="grammar-status-correct">Correct</span>
+          </div>
+          <div class="grammar-correct-row">
+            <span class="grammar-status-correct">✓</span>
+            <span>You are / You're</span>
+            <span class="grammar-status-correct">Correct</span>
+          </div>
+          <div class="grammar-wrong-row">
+            <span class="grammar-status-wrong">×</span>
+            <span>I are</span>
+            <span class="grammar-status-wrong">Incorrect</span>
+          </div>
+          <div class="grammar-wrong-row">
+            <span class="grammar-status-wrong">×</span>
+            <span>You am</span>
+            <span class="grammar-status-wrong">Incorrect</span>
+          </div>
+        </section>
+
+        <aside class="grammar-hint-box">
+          <span class="grammar-hint-icon">✦</span>
+          <div>
+            <h3>Hint for exercise a</h3>
+            <p>
+              Look carefully at the picture. Use <strong>I</strong> when
+              you speak about yourself. Use <strong>you</strong> when
+              you speak to another person.
+            </p>
+          </div>
+        </aside>
+      </div>
+
+      <div class="grammar-modal-footer">
+        <span>Pedagogy First. AI Enhanced.</span>
+        <button type="button" id="closeGrammarTipsFooter">
+          Got it · Close
+        </button>
+      </div>
+    </dialog>
   </section>
 
   <!-- ============ LESSON 1B ============ -->
@@ -191,79 +339,6 @@
           <small>Lesson 1A · Story image</small>
         </div>
       </figure>
-      
-<button
-  type="button"
-  class="grammar-tips-trigger"
-  id="openGrammarTips"
-  aria-haspopup="dialog"
-  aria-controls="grammarTipsDialog"
->
-  💡 Grammar Tips & Examples
-</button>
-
-<dialog
-  id="grammarTipsDialog"
-  class="grammar-tips-dialog"
-  aria-labelledby="grammarTipsTitle"
->
-  <div class="grammar-tips-header">
-    <div>
-      <span class="grammar-tips-label">NIR Academy · A1</span>
-      <h3 id="grammarTipsTitle">Verb be: I and You</h3>
-    </div>
-    <button
-      type="button"
-      class="grammar-tips-close"
-      id="closeGrammarTips"
-      aria-label="Close grammar tips"
-    >×</button>
-  </div>
-
-  <div class="grammar-tips-content">
-    <p>We use <strong>am</strong> with <strong>I</strong> and <strong>are</strong> with <strong>you</strong>.</p>
-
-    <div class="grammar-tip-example">
-      <h4>1. Use AM with I</h4>
-      <p><strong>I am Reza.</strong></p>
-      <p><strong>I'm</strong> Reza.</p>
-      <p class="grammar-tip-note">I am = I'm</p>
-    </div>
-
-    <div class="grammar-tip-example">
-      <h4>2. Use ARE with You</h4>
-      <p><strong>You are a student.</strong></p>
-      <p><strong>You're</strong> a student.</p>
-      <p class="grammar-tip-note">You are = You're</p>
-    </div>
-
-    <div class="grammar-tip-example">
-      <h4>3. Questions</h4>
-      <p><strong>Are you Helen?</strong></p>
-      <p>Yes, I am.</p>
-      <p>No, I'm not.</p>
-    </div>
-
-    <div class="grammar-tip-example">
-      <h4>4. Remember!</h4>
-      <p>✅ I am</p>
-      <p>✅ You are</p>
-      <p>❌ I are</p>
-      <p>❌ You am</p>
-    </div>
-
-    <div class="grammar-tip-example grammar-hint">
-      <h4>💡 Hint for exercise a</h4>
-      <p>Look at the two people in the picture.</p>
-      <p>Use <strong>I</strong> when you speak about yourself.</p>
-      <p>Use <strong>you</strong> when you speak to another person.</p>
-    </div>
-  </div>
-
-  <div class="grammar-tips-footer">
-    <button type="button" id="closeGrammarTipsFooter">Got it · Close</button>
-  </div>
-</dialog>
 
       <figure class="media-slot" data-image-src="" data-image-alt="" data-label="Lesson 1B · Image 2">
         <div class="ph" role="img" aria-label="Image placeholder: Lesson 1B, image 2. Textbook image to be added.">
@@ -338,5 +413,31 @@
 
 <script src="unit-1.js"></script>
 <script src="pwa.js"></script>
+
+<script>
+(() => {
+  const dialog = document.getElementById('grammarTipsDialog');
+  const openButton = document.getElementById('openGrammarTips');
+  const closeButton = document.getElementById('closeGrammarTips');
+  const footerCloseButton = document.getElementById('closeGrammarTipsFooter');
+
+  if (!dialog || !openButton || dialog.dataset.initialized === 'true') return;
+
+  dialog.dataset.initialized = 'true';
+
+  openButton.addEventListener('click', () => {
+    if (!dialog.open) dialog.showModal();
+  });
+
+  [closeButton, footerCloseButton].forEach((button) => {
+    if (button) button.addEventListener('click', () => dialog.close());
+  });
+
+  dialog.addEventListener('click', (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+})();
+</script>
+
 </body>
 </html>
