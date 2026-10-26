@@ -210,3 +210,12 @@ dialog.grammar-tips-dialog::backdrop{background:rgba(24,53,75,.55);-webkit-backd
 .grammar-modal-footer button{min-height:44px;padding:0 18px;border:0;border-radius:12px;background:var(--primary);color:#fff;font:inherit;font-weight:800;font-size:.95rem;cursor:pointer}
 .grammar-modal-footer button:hover{background:#1c3f5b}
 @media(max-width:480px){.grammar-correct-row,.grammar-wrong-row{grid-template-columns:24px 1fr}.grammar-correct-row .grammar-status-correct:last-child,.grammar-wrong-row .grammar-status-wrong:last-child{grid-column:2}.grammar-answer{flex-wrap:wrap}.grammar-answer select{flex-basis:100%;margin-left:0}}
+
+/* contractions activity */
+.contraction-task{margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}
+.contraction-task .audio-slot{margin-bottom:12px}
+.contraction-list{margin:0;padding:0;list-style:none;counter-reset:c;display:grid;gap:8px}
+.contraction-list li{counter-increment:c;display:flex;align-items:center;gap:12px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:#fff;font-size:1.2rem}
+.contraction-list li:before{content:counter(c);display:grid;place-items:center;flex-shrink:0;width:28px;height:28px;border-radius:8px;background:rgba(36,79,112,.1);color:var(--primary);font-size:.95rem;font-weight:850}
+.contraction-arrow{color:var(--gold2);font-weight:850}
+.contraction-short{color:var(--primary)}
