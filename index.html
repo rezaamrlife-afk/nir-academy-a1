@@ -3,6 +3,13 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#171410">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NIR A1">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="description" content="NIR Academy A1 English course dashboard with 12 units, listening, speaking, grammar and home practice.">
 <title>NIR Academy | A1 Learning Path</title>
 <style>
@@ -161,8 +168,9 @@ const units=[
 {n:11,pages:"66–70",title:"A new life in the US",a:"A new life in the US",b:"How was your day?",extra:"Practical English · Episode 6",g:"Simple past: regular and irregular verbs",v:"Regular verbs · get/go/have/do · Directions",p:"Past endings · Sentence rhythm · Polite intonation",desc:"Talk about yesterday, past experiences and asking for directions.",e:"🗽",c:"c11",range:"later"},
 {n:12,pages:"72–76",title:"Strangers on a train",a:"Strangers on a train",b:"Review the past",extra:"Review and Check 11&12",g:"Simple past review",v:"Regular and irregular verbs · Review of past forms",p:"Review of vowel sounds",desc:"Bring together past-tense grammar, vocabulary and pronunciation.",e:"🚆",c:"c12",range:"later"}
 ];
+const READY_UNITS=[1];/* units that already have a page (unit-N.html); add 2, 3, ... as they are built */
 const grid=document.getElementById('unitGrid'),search=document.getElementById('search'),empty=document.getElementById('empty');let activeFilter='all';
-function render(){const q=search.value.trim().toLowerCase();const filtered=units.filter(u=>(activeFilter==='all'||u.range===activeFilter)&&[u.title,u.a,u.b,u.g,u.v,u.p,u.extra].join(' ').toLowerCase().includes(q));grid.innerHTML=filtered.map(u=>`<article class="unit"><div class="cover ${u.c}"><span class="unitnum">UNIT ${String(u.n).padStart(2,'0')} · A1</span><span class="emoji">${u.e}</span><h3>${u.title}</h3></div><div class="unitbody"><div class="unitmeta"><span>Book pages ${u.pages}</span><span class="state">UNIT ${String(u.n).padStart(2,'0')}</span></div><p>${u.desc}</p><div class="tags"><span class="tag">A: ${u.a}</span><span class="tag">B: ${u.b}</span><span class="tag">${u.extra}</span></div><div class="progress"><span style="width:0%"></span></div><div class="unitfoot"><small>Grammar · Vocabulary · Pronunciation</small><button class="open" data-open="${u.n}">Open unit →</button></div></div></article>`).join('');empty.style.display=filtered.length?'none':'block';document.querySelectorAll('[data-open]').forEach(b=>b.addEventListener('click',()=>{const u=units.find(x=>x.n===Number(b.dataset.open));showToast(`Unit ${u.n}: ${u.title} — lesson reader is the next build step.`)}))}
+function render(){const q=search.value.trim().toLowerCase();const filtered=units.filter(u=>(activeFilter==='all'||u.range===activeFilter)&&[u.title,u.a,u.b,u.g,u.v,u.p,u.extra].join(' ').toLowerCase().includes(q));grid.innerHTML=filtered.map(u=>`<article class="unit"><div class="cover ${u.c}"><span class="unitnum">UNIT ${String(u.n).padStart(2,'0')} · A1</span><span class="emoji">${u.e}</span><h3>${u.title}</h3></div><div class="unitbody"><div class="unitmeta"><span>Book pages ${u.pages}</span><span class="state">UNIT ${String(u.n).padStart(2,'0')}</span></div><p>${u.desc}</p><div class="tags"><span class="tag">A: ${u.a}</span><span class="tag">B: ${u.b}</span><span class="tag">${u.extra}</span></div><div class="progress"><span style="width:0%"></span></div><div class="unitfoot"><small>Grammar · Vocabulary · Pronunciation</small><button class="open" data-open="${u.n}">Open unit →</button></div></div></article>`).join('');empty.style.display=filtered.length?'none':'block';document.querySelectorAll('[data-open]').forEach(b=>b.addEventListener('click',()=>{const u=units.find(x=>x.n===Number(b.dataset.open));if(READY_UNITS.indexOf(u.n)>-1){window.location.href='unit-'+u.n+'.html';return}showToast(`Unit ${u.n}: ${u.title} — lesson reader is the next build step.`)}))}
 document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-filter]').forEach(x=>x.classList.remove('active'));b.classList.add('active');activeFilter=b.dataset.filter;render()}));search.addEventListener('input',render);
 const toast=document.getElementById('toast');let timer;function showToast(s){toast.textContent=s;toast.classList.add('show');clearTimeout(timer);timer=setTimeout(()=>toast.classList.remove('show'),2800)}
 document.getElementById('practiceBtn').addEventListener('click',()=>showToast('Practice preview — interactive activities will be added in the next build.'));document.getElementById('notify').addEventListener('click',()=>showToast('You are all caught up!'));document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('sidebar').classList.toggle('open'));document.querySelectorAll('.sidebar a').forEach(a=>a.addEventListener('click',()=>document.getElementById('sidebar').classList.remove('open')));render();
@@ -344,4 +352,5 @@ if(mq.addEventListener)mq.addEventListener('change',onChange);else if(mq.addList
 sync();
 })();
 </script>
+<script src="pwa.js"></script>
 </body></html>
