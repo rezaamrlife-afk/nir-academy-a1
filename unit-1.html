@@ -136,6 +136,53 @@
   <h3 class="block-title">Speaking · Pairwork</h3>
   <p><strong>c</strong> In pairs, practice the conversations.</p>
   </div>
+  <!-- GRAMMAR: Verb be (singular) -->
+<div class="activity-card grammar-activity">
+  <h3 class="block-title">GRAMMAR · verb be (singular): I and you</h3>
+
+  <p><strong>a</strong> Write <strong>I</strong> or <strong>You</strong> in photos 1 and 2.</p>
+
+  <div class="grammar-photo-grid">
+    <div class="grammar-photo-item">
+      <div class="grammar-photo-placeholder">
+        <span>Photo 1</span>
+        <small>Add photo 1 here</small>
+      </div>
+      <label for="grammar-photo-1">Photo 1</label>
+      <select id="grammar-photo-1">
+        <option value="">Choose an answer</option>
+        <option value="I">I</option>
+        <option value="You">You</option>
+      </select>
+    </div>
+
+    <div class="grammar-photo-item">
+      <div class="grammar-photo-placeholder">
+        <span>Photo 2</span>
+        <small>Add photo 2 here</small>
+      </div>
+      <label for="grammar-photo-2">Photo 2</label>
+      <select id="grammar-photo-2">
+        <option value="">Choose an answer</option>
+        <option value="I">I</option>
+        <option value="You">You</option>
+      </select>
+    </div>
+  </div>
+
+  <button type="button" onclick="
+    const a = document.getElementById('grammar-photo-1').value;
+    const b = document.getElementById('grammar-photo-2').value;
+    const result = document.getElementById('grammar-photo-feedback');
+    if (!a || !b) {
+      result.textContent = 'Please answer both questions.';
+    } else {
+      result.textContent = 'Answers saved. Check your answers with your teacher.';
+    }
+  ">Check answers</button>
+
+  <p id="grammar-photo-feedback" aria-live="polite"></p>
+</div>
 </div>
 
   <!-- ============ LESSON 1B ============ -->
