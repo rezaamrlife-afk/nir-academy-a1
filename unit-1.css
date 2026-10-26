@@ -1,0 +1,85 @@
+/* NIR Academy · Unit page stylesheet
+   Shared pattern for unit-1.html, unit-2.html, ... (copy the HTML, keep this file). */
+:root{--bg:#171410;--panel:#211d18;--panel2:#2a241c;--line:#3b3227;--gold:#d4af37;--gold2:#f0d878;--text:#f8f4e9;--muted:#b8afa0;--glass:rgba(27,24,19,.86);--accent:var(--gold2)}
+*{box-sizing:border-box}
+html{font-size:16px;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html.large-text{font-size:18.4px}
+body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 82% 0%,#d4af3710,transparent 32%),var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--gold2);outline-offset:3px}
+.skip{position:absolute;left:12px;top:-64px;z-index:100;padding:10px 14px;border-radius:10px;background:var(--gold);color:#241e10;font-weight:800;font-size:.875rem}
+.skip:focus{top:12px}
+.wrap{width:100%;max-width:1040px;margin:0 auto;padding:0 clamp(16px,4vw,32px)}
+
+/* section accents */
+.s-1a{--accent:#e39bbd}
+.s-1b{--accent:#8fd6bb}
+.s-pe{--accent:#a8c6ee}
+
+/* top bar */
+.topbar{padding:18px 0 14px}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:10px 16px;flex-wrap:wrap}
+.back{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 15px;border:1px solid #6f5a25;border-radius:12px;background:rgba(212,175,55,.08);color:var(--gold2);font-size:.8125rem;font-weight:800;transition:background .2s}
+.back:hover{background:rgba(212,175,55,.18)}
+.crumb{margin:0;font-size:.75rem;color:var(--muted)}
+.crumb b{color:var(--text)}
+
+/* hero */
+.hero{border:1px solid #584624;border-radius:22px;padding:clamp(22px,4vw,38px);background:linear-gradient(110deg,#30271a,#292219 60%,#382a19)}
+.eyebrow{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;font-weight:850;color:var(--gold2)}
+.hero h1{margin:12px 0 10px;font-size:clamp(1.9rem,5.5vw,3rem);letter-spacing:-.04em;line-height:1.08}
+.hero h1 span{color:var(--gold2)}
+.lead{margin:0 0 22px;max-width:560px;font-size:.95rem;color:#d3c8b6}
+.focus{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:0}
+.focus>div{padding:12px 14px;border:1px solid rgba(255,255,255,.13);border-radius:14px;background:rgba(27,24,19,.6);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.focus dt{margin-bottom:4px;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--gold2)}
+.focus dd{margin:0;font-size:.875rem}
+
+/* sticky section navigation (glass) */
+.tabs{position:sticky;top:0;z-index:20;margin-top:20px;background:var(--glass);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.tabs ul{display:flex;gap:8px;margin:0;padding:8px 0;list-style:none;overflow-x:auto;scrollbar-width:none}
+.tabs ul::-webkit-scrollbar{display:none}
+.tabs a{display:flex;align-items:center;gap:9px;min-height:44px;padding:0 14px 0 8px;border:1px solid var(--line);border-radius:12px;background:var(--panel);color:#d3c8b6;font-size:.8125rem;font-weight:700;white-space:nowrap;transition:border-color .2s,background .2s}
+.tabs a:hover{border-color:#78612e}
+.tabs .n{display:grid;place-items:center;min-width:30px;height:28px;padding:0 6px;border-radius:8px;border:1px solid var(--accent);color:var(--accent);font-size:.72rem;font-weight:850;letter-spacing:.04em}
+.tabs a[aria-current="true"]{border-color:var(--accent);background:#2f2820;color:var(--text)}
+
+/* lessons */
+main{padding:6px clamp(16px,4vw,32px) 24px}
+.lesson{scroll-margin-top:84px;margin-top:26px;padding:clamp(18px,3.5vw,30px);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:20px;background:linear-gradient(160deg,rgba(255,255,255,.04),rgba(255,255,255,.01)),var(--panel)}
+.lesson-head{display:grid;gap:8px;justify-items:start}
+.badge{padding:4px 10px;border:1px solid var(--accent);border-radius:8px;color:var(--accent);font-size:.7rem;font-weight:850;letter-spacing:.14em;text-transform:uppercase}
+.lesson h2{margin:0;font-size:clamp(1.4rem,3.6vw,1.9rem);letter-spacing:-.03em;line-height:1.15}
+.note{margin:0;font-size:.8125rem;color:var(--muted)}
+.block-title{margin:24px 0 10px;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--muted)}
+
+/* image slots */
+.media-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:14px}
+.media-slot{margin:0}
+.ph{display:grid;place-content:center;justify-items:center;gap:6px;aspect-ratio:4/3;padding:16px;text-align:center;border:2px dashed rgba(212,175,55,.55);border-radius:16px;background:repeating-linear-gradient(135deg,rgba(255,255,255,.03) 0 12px,transparent 12px 24px);color:var(--muted);font-size:.8125rem}
+.ph b{color:var(--gold2);font-size:.9rem}
+.ph small{font-size:.72rem}
+.ph-icon{font-size:2rem;line-height:1;color:var(--accent)}
+.media-slot img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:16px}
+
+/* audio slots */
+.audio-list{display:grid;gap:10px}
+.audio-slot{padding:12px 14px;border:1px solid var(--line);border-radius:14px;background:rgba(0,0,0,.2)}
+.audio-meta{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px 10px;margin-bottom:8px}
+.audio-meta b{font-size:.875rem}
+.pending{padding:3px 9px;border:1px dashed rgba(212,175,55,.6);border-radius:8px;color:var(--gold2);font-size:.75rem;font-weight:800}
+.audio-slot audio{display:block;width:100%;height:40px;color-scheme:dark}
+.audio-slot:not(.ready) audio{opacity:.45;pointer-events:none}
+
+/* footer */
+.foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px 16px;padding-top:20px;padding-bottom:36px;border-top:1px solid var(--line);color:#9c927f;font-size:.72rem}
+
+@media(max-width:700px){
+  .focus{grid-template-columns:1fr}
+  .crumb{display:none}
+  .lesson{scroll-margin-top:76px}
+}
+
+/* reduced motion: user setting (from the main app) and OS preference */
+html.reduce-motion,html.reduce-motion *{scroll-behavior:auto!important;transition:none!important;animation:none!important}
+@media(prefers-reduced-motion:reduce){html,*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
