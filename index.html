@@ -99,6 +99,103 @@ html{scroll-behavior:auto!important}
 *,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
 .unit:hover{transform:none}
 }
+/* ===== Light theme (blue / white / gold) + larger type: overrides only ===== */
+:root{--bg:#F0F7FC;--panel:#FFFFFF;--panel2:#F0F7FC;--line:#D9E5EE;--gold:#B89427;--gold2:#8A6D12;--text:#18354B;--muted:#4A6479;--green:#1F7A56;--red:#B3402A;--primary:#244F70}
+body{background:radial-gradient(ellipse at 82% 0%,#b8942714,transparent 32%),var(--bg)}
+.app{grid-template-columns:260px minmax(0,1fr)}
+.sidebar{background:#FFFFFF;border-right-color:var(--line)}
+.logo{background:linear-gradient(135deg,#d9bb55,#B89427);color:#18354B}
+.nav-label{color:var(--muted)}
+.nav a{color:var(--text)}
+.nav a:hover,.nav a.active,.nav .navbtn:hover,.nav .navbtn[aria-expanded="true"]{background:rgba(36,79,112,.08);color:var(--primary)}
+.nav .navbtn{color:var(--text)}
+.side-note{background:linear-gradient(140deg,#FBF5E0,#FFFFFF);border-color:#E8D9A8}
+.iconbtn:hover{border-color:#B89427;color:var(--primary)}
+.hero{border-color:var(--line);background:linear-gradient(110deg,#FFFFFF,#E8F2F9 65%,#F5EBC8)}
+.hero p{color:#35546b}
+.hero-art{min-height:200px}
+.primary{background:var(--primary);color:#fff}
+.secondary{background:#fff;color:var(--primary);border:1px solid #BFD1DF}
+.course-book{box-shadow:12px 16px 30px rgba(24,53,75,.25),inset 8px 0 #8e6818}
+.float{background:rgba(255,255,255,.95);border-color:var(--line);box-shadow:0 8px 24px rgba(24,53,75,.12)}
+.stat{background:#fff}
+.stat,.unit,.panel{box-shadow:0 1px 4px rgba(24,53,75,.06)}
+.filter{color:var(--text)}
+.filter.active{background:rgba(184,148,39,.14);border-color:#B89427;color:#6B530B}
+.search::placeholder{color:#6b8397}
+.unit:hover{border-color:#B89427}
+.cover h3{color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.35)}
+.unitbody p{color:#35546b}
+.tag{color:#35546b;border-color:var(--line);background:#F0F7FC}
+.progress{background:#DCE8F1}
+.open{color:var(--primary)}
+.ficon{background:rgba(36,79,112,.08);color:var(--primary)}
+.feature{border-color:var(--line);background:#F8FBFE}
+.homebox{background:linear-gradient(140deg,#FBF5E0,#FFFFFF);border-color:#E8D9A8}
+footer{color:var(--muted)}
+.toast{background:var(--primary);color:#fff}
+/* navigation menu + overlays */
+.nav-overlay{background:rgba(24,53,75,.5)}
+.iconbtn.mobile-menu[aria-expanded="true"]{background:#fff;color:var(--primary);border-color:#B89427}
+@media(max-width:760px){
+.sidebar{background:rgba(255,255,255,.98);border-right:1px solid rgba(184,148,39,.55);box-shadow:18px 0 50px rgba(24,53,75,.28)}
+.sidebar .nav-label{color:var(--muted)}
+.sidebar .nav a,.sidebar .nav .navbtn{color:var(--text)}
+.sidebar .nav a:hover,.sidebar .nav a.active,.sidebar .nav .navbtn:hover{color:var(--primary)}
+}
+/* settings drawer */
+.s-overlay{background:rgba(24,53,75,.5)}
+.s-drawer{background:#F0F7FC;border-left-color:var(--line);box-shadow:-18px 0 50px rgba(24,53,75,.25);color-scheme:light}
+.s-foot{background:#fff}
+.s-group{background:#fff}
+.s-row{border-bottom-color:var(--line)}
+.s-select{background:#F0F7FC;border-color:#BFD1DF;color:var(--text)}
+.s-tag{border-color:#B89427}
+.s-tag.live{border-color:#1F7A56}
+.seg span{background:#F0F7FC;color:var(--text)}
+.seg input:checked+span{background:rgba(36,79,112,.1);border-color:var(--primary);color:var(--primary)}
+.track{background:#C9D8E4;border-color:#8FA7BA}
+.track:after{background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.3)}
+.switch input:checked+.track{background:var(--primary);border-color:var(--primary)}
+.switch input:checked+.track:after{background:#fff}
+/* larger text: default sizes */
+.brand b,.course-book b{font-size:16px}
+.brand small,.nav-label,.eyebrow,.profile small,.stat small,.unitmeta,.unitfoot small,.float,.homebox label,footer,.feature small,.unitnum,.course-book small{font-size:13px}
+.tag{font-size:12.5px}
+.side-note p,.sectionhead p,.filter,.search,.unitbody p,.open,.panel>p,.feature b,.homebox p{font-size:14.5px}
+.crumb,.profile b,.btn,.float b,.toast,.empty{font-size:15px}
+.nav a,.nav .navbtn,.side-note b,.hero p{font-size:16px}
+.hero h1{font-size:clamp(34px,4.4vw,52px)}
+.sectionhead h2{font-size:26px}
+.panel h3{font-size:18px}
+.cover h3{font-size:21px}
+.homebox h4{font-size:20px}
+.stat strong{font-size:22px}
+.s-head h2{font-size:calc(26px*var(--sf))}
+.s-head p{font-size:calc(15px*var(--sf))}
+.s-group h3{font-size:calc(13px*var(--sf))}
+.s-label{font-size:calc(16px*var(--sf))}
+.s-help,.s-status,.s-privacy{font-size:calc(14px*var(--sf))}
+.s-tag{font-size:calc(12px*var(--sf))}
+.s-select{font-size:calc(16px*var(--sf))}
+.seg span{font-size:calc(15px*var(--sf))}
+.s-actions .btn{font-size:calc(15px*var(--sf))}
+@media(min-width:761px){.cover{height:116px}}
+@media(max-width:760px){.hero h1{font-size:40px}.sectionhead h2{font-size:24px}.stat strong{font-size:20px}}
+/* larger text: user setting (Settings > Larger text) */
+html.large-text .brand b,html.large-text .course-book b{font-size:18px}
+html.large-text .brand small,html.large-text .nav-label,html.large-text .eyebrow,html.large-text .profile small,html.large-text .stat small,html.large-text .unitmeta,html.large-text .unitfoot small,html.large-text .float,html.large-text .homebox label,html.large-text footer,html.large-text .feature small,html.large-text .unitnum,html.large-text .course-book small{font-size:14.5px}
+html.large-text .tag{font-size:14px}
+html.large-text .side-note p,html.large-text .sectionhead p,html.large-text .filter,html.large-text .search,html.large-text .unitbody p,html.large-text .open,html.large-text .panel>p,html.large-text .feature b,html.large-text .homebox p{font-size:16px}
+html.large-text .crumb,html.large-text .profile b,html.large-text .btn,html.large-text .float b,html.large-text .toast,html.large-text .empty{font-size:17px}
+html.large-text .nav a,html.large-text .nav .navbtn,html.large-text .side-note b,html.large-text .hero p{font-size:18px}
+html.large-text .hero h1{font-size:clamp(38px,5vw,58px)}
+html.large-text .sectionhead h2{font-size:29px}
+html.large-text .panel h3{font-size:20px}
+html.large-text .unit .cover h3{font-size:23px}
+html.large-text .homebox h4{font-size:22px}
+html.large-text .stat strong{font-size:25px}
+@media(max-width:760px){html.large-text .hero h1{font-size:44px}html.large-text .sectionhead h2{font-size:27px}html.large-text .stat strong{font-size:23px}}
 </style>
 </head>
 <body>
