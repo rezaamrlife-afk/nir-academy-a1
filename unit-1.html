@@ -665,6 +665,58 @@
       </aside>
     </div>
 
+    <!-- ============ VOCABULARY: NUMBERS 0–10 ============ -->
+    <!-- One picture (images/unit-1/image3.png) shows photos 1, 2 and 3.
+         Once the answer key is confirmed, set data-correct="1", "2" or "3" on the fieldset below. -->
+    <div class="activity-card vocab-activity" id="vocab-activity">
+      <div class="vocab-heading">
+        <span class="vocab-kicker">VOCABULARY · A1</span>
+        <h3>Numbers 0–10</h3>
+      </div>
+
+      <div class="audio-list">
+        <div class="audio-slot" data-audio-src="audio/unit-1/AEF3e_Starter_SB_1.07.mp3" data-label="Vocabulary · Listening 1.7">
+          <div class="audio-meta"><b>Listening 1.7</b></div>
+          <audio controls preload="none" aria-label="Vocabulary: Numbers 0–10, Listening 1.7"></audio>
+        </div>
+      </div>
+
+      <fieldset class="listen-check" id="vocabListenCheck" data-listen-check data-correct="">
+        <legend>Listen and check (✓) the correct photo.</legend>
+        <figure class="vocab-image">
+          <img src="images/unit-1/image3.png" alt="Photos 1, 2 and 3 for the Listening 1.7 activity" loading="lazy">
+        </figure>
+        <div class="vp-grid">
+          <div class="vp-option">
+            <input type="radio" class="vp-input" id="vocab-photo-1" name="vocab-photo" value="1" aria-label="Photo 1">
+            <label class="vp-card" for="vocab-photo-1">
+              <span class="vp-tick" aria-hidden="true">✓</span>
+              <span class="vp-label">Photo 1</span>
+            </label>
+          </div>
+          <div class="vp-option">
+            <input type="radio" class="vp-input" id="vocab-photo-2" name="vocab-photo" value="2" aria-label="Photo 2">
+            <label class="vp-card" for="vocab-photo-2">
+              <span class="vp-tick" aria-hidden="true">✓</span>
+              <span class="vp-label">Photo 2</span>
+            </label>
+          </div>
+          <div class="vp-option">
+            <input type="radio" class="vp-input" id="vocab-photo-3" name="vocab-photo" value="3" aria-label="Photo 3">
+            <label class="vp-card" for="vocab-photo-3">
+              <span class="vp-tick" aria-hidden="true">✓</span>
+              <span class="vp-label">Photo 3</span>
+            </label>
+          </div>
+        </div>
+        <div class="ws-actions">
+          <button type="button" class="ws-btn ws-btn-primary" data-lc-action="check">Check answer</button>
+          <button type="button" class="ws-btn" data-lc-action="reset">Reset</button>
+        </div>
+        <p class="lc-feedback" role="status" aria-live="polite"></p>
+      </fieldset>
+    </div>
+
     <!-- Grammar Tips Modal -->
     <dialog
       id="grammarTipsDialog"
@@ -874,6 +926,7 @@
 <script src="pwa.js"></script>
 <script src="unit-notes.js"></script>
 <script src="unit-worksheet.js"></script>
+<script src="unit-listen-check.js"></script>
 
 <script>
 (() => {
