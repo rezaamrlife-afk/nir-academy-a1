@@ -83,3 +83,46 @@ main{padding:6px clamp(16px,4vw,32px) 24px}
 /* reduced motion: user setting (from the main app) and OS preference */
 html.reduce-motion,html.reduce-motion *{scroll-behavior:auto!important;transition:none!important;animation:none!important}
 @media(prefers-reduced-motion:reduce){html,*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+/* ===== Light theme (blue / white / gold) + larger type: overrides only ===== */
+:root{--bg:#F0F7FC;--panel:#FFFFFF;--panel2:#F0F7FC;--line:#D9E5EE;--gold:#B89427;--gold2:#8A6D12;--text:#18354B;--muted:#4A6479;--glass:rgba(255,255,255,.9);--primary:#244F70}
+body{background:radial-gradient(ellipse at 82% 0%,#b8942714,transparent 32%),var(--bg)}
+.skip{background:var(--primary);color:#fff}
+.back{border-color:#B89427;background:#fff;color:var(--primary)}
+.back:hover{background:#F0F7FC}
+.hero{border-color:var(--line);background:linear-gradient(110deg,#FFFFFF,#E8F2F9 65%,#F5EBC8);box-shadow:0 2px 10px rgba(24,53,75,.06)}
+.lead{color:#35546b}
+.focus>div{border-color:var(--line);background:rgba(255,255,255,.85)}
+.tabs a{background:#fff;color:var(--text)}
+.tabs a:hover{border-color:var(--gold)}
+.tabs a[aria-current="true"]{background:#F0F7FC;color:var(--text)}
+.lesson{background:#fff;box-shadow:0 2px 10px rgba(24,53,75,.06)}
+.s-1a{--accent:#A63E78}
+.s-1b{--accent:#1B7A5C}
+.s-pe{--accent:#2F6FB5}
+.ph{border-color:rgba(184,148,39,.75);background:repeating-linear-gradient(135deg,rgba(36,79,112,.04) 0 12px,transparent 12px 24px)}
+.audio-slot{background:#F0F7FC}
+.audio-slot audio{color-scheme:light}
+.pending{border-color:rgba(184,148,39,.85)}
+.foot{color:var(--muted)}
+/* larger type */
+.crumb{font-size:.9rem}
+.back{font-size:.95rem}
+.eyebrow{font-size:.82rem}
+.hero h1{font-size:clamp(2.2rem,6vw,3.4rem)}
+.lead{font-size:1.1rem}
+.focus dt{font-size:.8rem}
+.focus dd{font-size:1rem}
+.tabs a{font-size:.95rem}
+.tabs .n{font-size:.85rem}
+.badge{font-size:.82rem}
+.lesson h2{font-size:clamp(1.6rem,4vw,2.2rem)}
+.note{font-size:.95rem}
+.block-title{font-size:.85rem}
+.ph{font-size:.95rem}
+.ph b{font-size:1.05rem}
+.ph small{font-size:.85rem}
+.audio-meta b{font-size:1rem}
+.pending{font-size:.88rem}
+.foot{font-size:.88rem}
+.skip{font-size:1rem}
