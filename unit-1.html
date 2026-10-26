@@ -169,19 +169,34 @@
       </select>
     </div>
   </div>
+  <div class="activity-card grammar-activity">
+  <h3 class="block-title">GRAMMAR · verb be (singular): I and you</h3>
 
-  <button type="button" onclick="
-    const a = document.getElementById('grammar-photo-1').value;
-    const b = document.getElementById('grammar-photo-2').value;
-    const result = document.getElementById('grammar-photo-feedback');
-    if (!a || !b) {
-      result.textContent = 'Please answer both questions.';
-    } else {
-      result.textContent = 'Answers saved. Check your answers with your teacher.';
-    }
-  ">Check answers</button>
+  <p><strong>a</strong> Write <strong>I</strong> or <strong>You</strong> in photos 1 and 2.</p>
 
-  <p id="grammar-photo-feedback" aria-live="polite"></p>
+  <figure class="grammar-image">
+    <img
+      src="images/image2.jpg"
+      alt="Grammar activity: Verb be, I and you"
+      loading="lazy"
+    >
+  </figure>
+
+  <p><strong>1.</strong>
+    <select id="grammar-photo-1" aria-label="Answer for photo 1">
+      <option value="">Choose</option>
+      <option value="I">I</option>
+      <option value="You">You</option>
+    </select>
+  </p>
+
+  <p><strong>2.</strong>
+    <select id="grammar-photo-2" aria-label="Answer for photo 2">
+      <option value="">Choose</option>
+      <option value="I">I</option>
+      <option value="You">You</option>
+    </select>
+  </p>
 </div>
 </div>
 
