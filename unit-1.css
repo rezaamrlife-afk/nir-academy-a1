@@ -397,3 +397,20 @@ dialog.grammar-tips-dialog::backdrop{background:rgba(24,53,75,.55);-webkit-backd
 .goodbye-list{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:10px}
 .goodbye-card{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;padding:12px 14px;border:1px solid var(--line);border-radius:14px;background:#fff}
 .goodbye-phrase{font-size:1.3rem;font-weight:850;color:var(--primary);overflow-wrap:anywhere}
+/* words and phrases to learn */
+.phrase-list{counter-reset:none}
+.phrase-card{position:relative;padding-left:48px}
+.phrase-num{position:absolute;left:12px;top:50%;transform:translateY(-50%);display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:#E8EFF5;color:var(--primary);font-size:.82rem;font-weight:850}
+.phrase-card .goodbye-phrase{flex:1 1 180px}
+.phrase-tools{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.phrase-done{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:.98rem;font-weight:700;color:var(--muted);cursor:pointer}
+.phrase-done input{width:22px;height:22px;accent-color:var(--primary)}
+.phrase-card.is-done{border-color:#1F7A56;background:#F1FAF5}
+.phrase-card.is-done .phrase-done{color:#1F7A56}
+.phrase-options{display:grid;gap:10px;margin-top:12px}
+.phrase-opt{min-height:48px;text-align:left;font-size:1.1rem}
+.phrase-opt.is-correct{border-color:#1F7A56;background:#E8F5EE;color:#14583D}
+.phrase-opt.is-wrong{border-color:#B3402A;background:#FBEDEA;color:#8C2F1D}
+.phrase-opt:disabled{cursor:default}
+.lc-feedback.is-ok{color:#1F7A56}.lc-feedback.is-bad{color:#B3402A}
+@media(max-width:480px){.phrase-card{padding-left:44px}.phrase-tools{width:100%;justify-content:space-between}}
