@@ -365,3 +365,19 @@ dialog.grammar-tips-dialog::backdrop{background:rgba(24,53,75,.55);-webkit-backd
 .day-syl{font-size:1.02rem;color:var(--muted)}
 .day-syl strong{color:var(--primary);font-weight:900}
 .day-tag{margin-top:4px;padding:2px 10px;border:1px solid var(--gold);border-radius:999px;font-family:"Segoe UI","Noto Sans","DejaVu Sans",system-ui,sans-serif;font-size:.88rem;font-weight:800;color:var(--gold2)}
+
+/* ===== Vocabulary: Days of the week ===== */
+.days-first{margin-top:4px;padding-top:0;border-top:0}
+.days-seven{counter-reset:dayorder}
+.days-seven .day-card{position:relative;counter-increment:dayorder}
+.days-seven .day-card::before{content:counter(dayorder);position:absolute;top:8px;left:8px;display:grid;place-items:center;width:24px;height:24px;border-radius:8px;background:rgba(36,79,112,.1);color:var(--primary);font-size:.8rem;font-weight:850}
+.days-write{margin-bottom:0}
+.days-question{margin:0 0 14px;padding:12px 14px;border-left:3px solid var(--gold);border-radius:12px;background:#fff;font-size:1.2rem;font-weight:800;line-height:1.4;color:var(--primary)}
+.days-label{display:block;margin-bottom:6px;font-size:1rem;font-weight:800}
+.days-write textarea{min-height:92px;line-height:1.5;resize:vertical}
+.days-hint{margin:6px 0 0;font-size:.9rem;color:var(--muted)}
+.days-seven{grid-template-columns:repeat(auto-fit,minmax(min(100%,148px),1fr))}
+.days-seven .day-name{font-size:1.25rem;overflow-wrap:anywhere}
+@media(max-width:700px){.days-seven{grid-template-columns:repeat(2,minmax(0,1fr))}.days-seven .day-name{font-size:1.1rem}.days-seven .num-say{padding:0 8px}}
+@media(max-width:330px){.days-seven{grid-template-columns:1fr}}
+@media(max-width:700px){.days-seven .day-card{padding-top:30px}}
