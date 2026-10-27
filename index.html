@@ -196,6 +196,85 @@ html.large-text .unit .cover h3{font-size:23px}
 html.large-text .homebox h4{font-size:22px}
 html.large-text .stat strong{font-size:25px}
 @media(max-width:760px){html.large-text .hero h1{font-size:44px}html.large-text .sectionhead h2{font-size:27px}html.large-text .stat strong{font-size:23px}}
+/* NIR Academy A1 — Light Theme */
+:root {
+  color-scheme: light;
+  --bg: #F7F9FC;
+  --panel: #FFFFFF;
+  --panel2: #EEF4FA;
+  --line: #D9E2EC;
+  --gold: #B58A1E;
+  --gold2: #8A6815;
+  --text: #202B3C;
+  --muted: #64748B;
+  --green: #16794B;
+  --red: #C0392B;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.sidebar,
+.stat,
+.unit,
+.iconbtn,
+.filter,
+.search {
+  background: var(--panel);
+  color: var(--text);
+  border-color: var(--line);
+}
+
+.nav a,
+.crumb,
+.profile small,
+.unitmeta,
+.sectionhead p {
+  color: var(--muted);
+}
+
+.side-note,
+.hero,
+.float {
+  background: #EEF4FA;
+  color: var(--text);
+  border-color: var(--line);
+}
+
+.hero p,
+.unitbody p,
+.nav a:hover,
+.nav a.active {
+  color: var(--text);
+}
+
+.unitbody p,
+.tag {
+  color: #475569;
+}
+
+.tag {
+  border-color: var(--line);
+}
+
+.secondary {
+  background: #FFFFFF;
+  color: var(--text);
+  border-color: var(--line);
+}
+
+.meta-light {
+  color: var(--muted);
+}
+
+input,
+button,
+select,
+textarea {
+  color-scheme: light;
+}
 </style>
 </head>
 <body>
