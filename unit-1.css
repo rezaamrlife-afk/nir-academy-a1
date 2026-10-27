@@ -327,3 +327,41 @@ dialog.grammar-tips-dialog::backdrop{background:rgba(24,53,75,.55);-webkit-backd
 /* a placeholder must disappear once its real image has loaded (display rules above would otherwise override [hidden]) */
 .ph[hidden]{display:none!important}
 .ws-meta .ws-field{width:100%;min-width:0}
+
+/* ===== Vocabulary: Numbers 0–10, listen and repeat ===== */
+.vocab-repeat{margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}
+.vocab-sub{margin:0 0 12px;font-size:1.15rem;line-height:1.3}
+.num-grid{list-style:none;margin:14px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:10px}
+.num-card{display:grid;justify-items:center;align-content:start;gap:2px;min-width:0;padding:14px 8px 10px;border:1px solid var(--line);border-radius:14px;background:#fff;text-align:center}
+.num-digit{font-size:2.4rem;font-weight:850;line-height:1;color:var(--primary)}
+.num-word{margin-top:4px;font-size:1.2rem;font-weight:800}
+.num-ipa{font-family:"Segoe UI","Noto Sans","DejaVu Sans",system-ui,sans-serif;font-size:.98rem;color:var(--gold2)}
+.num-say{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:44px;min-width:44px;margin-top:8px;padding:0 12px;border:1px solid #BFD1DF;border-radius:12px;background:#F0F7FC;color:var(--primary);font:inherit;font-size:.92rem;font-weight:800;cursor:pointer}
+.num-say[hidden]{display:none}
+.num-say svg{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.num-say:hover{border-color:var(--gold)}
+.num-say:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.num-say.is-speaking{border-color:var(--primary);background:rgba(36,79,112,.12)}
+.num-note{margin:12px 0 0;font-size:.9rem;color:var(--muted)}
+.num-note[hidden]{display:none}
+@media(max-width:380px){.num-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* ===== Pronunciation: /h/, /aɪ/, /iː/ + days of the week ===== */
+.pron-activity{border-left-color:var(--gold);background:linear-gradient(160deg,#FFFFFF,#FBF5E0)}
+.pron-activity .vocab-heading h3{font-family:"Segoe UI","Noto Sans","DejaVu Sans",Inter,system-ui,sans-serif}
+.pron-activity .vocab-heading h3 span{color:var(--gold2)}
+.pron-first{margin-top:4px;padding-top:0;border-top:0}
+.pron-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:12px;margin-top:14px}
+.pron-group{min-width:0;padding:14px;border:1px solid var(--line);border-radius:16px;background:#fff}
+.pron-sound{margin:0;font-family:"Segoe UI","Noto Sans","DejaVu Sans",Inter,system-ui,sans-serif;font-size:2rem;font-weight:850;line-height:1.1;color:var(--primary)}
+.pron-words{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:6px}
+.pron-words li{display:flex;align-items:center;justify-content:space-between;gap:8px;min-width:0;padding:2px 4px 2px 12px;border:1px solid var(--line);border-radius:12px;background:#F8FBFE}
+.pron-text{font-size:1.2rem;font-weight:700;overflow-wrap:anywhere}
+.pron-text b{color:var(--gold2);font-weight:900}
+.pron-words .num-say{flex-shrink:0;margin-top:0;padding:0 10px;background:#fff}
+.vocab-repeat>.vocab-kicker{display:block;margin-bottom:6px}
+.day-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr))}
+.day-name{margin-top:0;font-size:1.35rem}
+.day-syl{font-size:1.02rem;color:var(--muted)}
+.day-syl strong{color:var(--primary);font-weight:900}
+.day-tag{margin-top:4px;padding:2px 10px;border:1px solid var(--gold);border-radius:999px;font-family:"Segoe UI","Noto Sans","DejaVu Sans",system-ui,sans-serif;font-size:.88rem;font-weight:800;color:var(--gold2)}
