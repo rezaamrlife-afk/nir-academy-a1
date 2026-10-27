@@ -381,3 +381,15 @@ dialog.grammar-tips-dialog::backdrop{background:rgba(24,53,75,.55);-webkit-backd
 @media(max-width:700px){.days-seven{grid-template-columns:repeat(2,minmax(0,1fr))}.days-seven .day-name{font-size:1.1rem}.days-seven .num-say{padding:0 8px}}
 @media(max-width:330px){.days-seven{grid-template-columns:1fr}}
 @media(max-width:700px){.days-seven .day-card{padding-top:30px}}
+/* days: fill-in (today / tomorrow / the weekend) */
+.days-fill{margin-top:18px}
+.days-fill-list{display:grid;gap:10px;margin:0 0 6px;padding:0;list-style:none}
+.days-fill-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:1.1rem}
+.days-fill-row label{min-width:9.5ch}
+.days-fill-row .ws-field{flex:1 1 130px;min-width:0;max-width:220px}
+.days-fill-and{font-weight:700}
+.days-fill .ws-field.is-correct{border-color:#1F7A56;background:#E8F5EE}
+.days-fill .ws-field.is-wrong{border-color:#B3402A;background:#FBEDEA}
+.days-fill .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media(max-width:480px){.days-fill-row label:not(.sr-only){flex:0 0 100%}.days-fill-row .ws-field{flex:1 1 90px}}
+.days-fill-row .ws-field{box-sizing:border-box;width:auto}.days-fill-row{min-width:0}
