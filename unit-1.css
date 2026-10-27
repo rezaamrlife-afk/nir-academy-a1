@@ -414,3 +414,13 @@ dialog.grammar-tips-dialog::backdrop{background:rgba(24,53,75,.55);-webkit-backd
 .phrase-opt:disabled{cursor:default}
 .lc-feedback.is-ok{color:#1F7A56}.lc-feedback.is-bad{color:#B3402A}
 @media(max-width:480px){.phrase-card{padding-left:44px}.phrase-tools{width:100%;justify-content:space-between}}
+/* lesson 1B: countries */
+.country-list{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:10px}
+.country-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;padding:10px 12px;border:1px solid var(--line);border-radius:14px;background:#fff}
+.country-row>label:first-child{flex:0 0 100%;font-size:1.05rem;font-weight:700}
+.country-row .ws-field{flex:1 1 160px;min-width:0;box-sizing:border-box;width:auto;max-width:320px}
+.country-check .country-row{justify-content:space-between}
+.country-check-label{font-size:1.05rem;font-weight:700}
+.country-row:has(input[type=checkbox]:checked){border-color:#1F7A56;background:#F1FAF5}
+.countries-activity .media-slot{margin:0 0 14px}
+.country-form,.country-list,.country-row{min-width:0;max-width:100%;box-sizing:border-box}.country-row .ws-field{flex:1 1 120px}
