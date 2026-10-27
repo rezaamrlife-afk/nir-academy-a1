@@ -943,6 +943,21 @@
         <p class="num-note" data-say-note hidden>The “Hear” buttons use your device’s voice. For the course recording, play Listening 1.13.</p>
       </div>
 
+      <form class="vocab-repeat days-fill" id="days-fill" aria-labelledby="days-fill-title" novalidate>
+        <h4 class="vocab-sub" id="days-fill-title">Write the days of the week.</h4>
+        <ul class="days-fill-list">
+          <li class="days-fill-row"><label for="df-today"><strong>today</strong> =</label><input class="ws-field" id="df-today" type="text" data-df="today" autocomplete="off" autocapitalize="words" spellcheck="false"></li>
+          <li class="days-fill-row"><label for="df-tomorrow"><strong>tomorrow</strong> =</label><input class="ws-field" id="df-tomorrow" type="text" data-df="tomorrow" autocomplete="off" autocapitalize="words" spellcheck="false"></li>
+          <li class="days-fill-row"><label for="df-weekend1"><strong>the weekend</strong> =</label><input class="ws-field" id="df-weekend1" type="text" data-df="weekend" autocomplete="off" autocapitalize="words" spellcheck="false"><span class="days-fill-and">and</span><label class="sr-only" for="df-weekend2">the weekend, second day</label><input class="ws-field" id="df-weekend2" type="text" data-df="weekend" autocomplete="off" autocapitalize="words" spellcheck="false"></li>
+        </ul>
+        <p class="days-hint">Use a capital letter, for example: Monday. “Today” and “tomorrow” are checked against the date on your device.</p>
+        <div class="ws-actions">
+          <button type="button" class="ws-btn ws-btn-primary" id="df-check">Check answers</button>
+          <button type="reset" class="ws-btn">Clear</button>
+        </div>
+        <p class="lc-feedback" id="df-feedback" role="status" aria-live="polite"></p>
+      </form>
+
       <form class="vocab-repeat days-write" id="days-write" aria-labelledby="days-write-title">
         <h4 class="vocab-sub" id="days-write-title">Write.</h4>
         <p class="days-question" id="days-question">What days are your English classes?</p>
@@ -1166,6 +1181,7 @@
 <script src="unit-worksheet.js"></script>
 <script src="unit-listen-check.js"></script>
 <script src="unit-say.js"></script>
+<script src="unit-days.js"></script>
 
 <script>
 (() => {
