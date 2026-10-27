@@ -438,3 +438,18 @@ dialog.grammar-tips-dialog::backdrop{background:rgba(24,53,75,.55);-webkit-backd
 .dialogue-activity:has(input[value="a"]:checked) .dlg-line.dlg-a,.dialogue-activity:has(input[value="b"]:checked) .dlg-line.dlg-b{border-color:#B89427;background:#FFF8E1;box-shadow:0 0 0 2px #F5E3A0}
 .dialogue-activity:has(input[value="a"]:checked) .dlg-line.dlg-b,.dialogue-activity:has(input[value="b"]:checked) .dlg-line.dlg-a{opacity:.7}
 .dlg-line,.dlg-radio{box-sizing:border-box;max-width:100%}
+/* lesson 1B: Where is it? pairwork */
+.wi-panel{display:none}
+.wi-activity:has(input[name="wi-role"][value="a"]:checked) #wi-panel-a,.wi-activity:has(input[name="wi-role"][value="b"]:checked) #wi-panel-b{display:block}
+.wi-steps{margin:8px 0 0;padding-left:1.3em;display:grid;gap:6px;font-size:1.02rem}
+.wi-key{list-style:none;margin:10px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,200px),1fr));gap:8px}
+.wi-key li{padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:#fff;font-size:1.05rem;overflow-wrap:anywhere}
+.wi-list{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:10px}
+.wi-item{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;padding:10px 12px;border:1px solid var(--line);border-radius:14px;background:#fff;box-sizing:border-box;min-width:0}
+.wi-item>label{flex:0 0 100%;font-size:1.05rem}
+.wi-item .ws-field{flex:1 1 140px;min-width:0;box-sizing:border-box;width:auto;max-width:300px}
+.wi-fb{font-size:.92rem;font-weight:800;color:var(--muted)}
+.wi-item.is-correct{border-color:#1F7A56;background:#F1FAF5}.wi-item.is-correct .wi-fb{color:#1F7A56}
+.wi-item.is-wrong{border-color:#B3402A;background:#FBEDEA}.wi-item.is-wrong .wi-fb{color:#B3402A}
+.wi-item.is-shown{border-color:#B89427;background:#FFF8E1}
+.wi-activity .ws-actions{margin-top:12px}
