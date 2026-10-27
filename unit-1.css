@@ -424,3 +424,17 @@ dialog.grammar-tips-dialog::backdrop{background:rgba(24,53,75,.55);-webkit-backd
 .country-row:has(input[type=checkbox]:checked){border-color:#1F7A56;background:#F1FAF5}
 .countries-activity .media-slot{margin:0 0 14px}
 .country-form,.country-list,.country-row{min-width:0;max-width:100%;box-sizing:border-box}.country-row .ws-field{flex:1 1 120px}
+/* lesson 1B: conversation 1.19 */
+.dlg-list{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:10px}
+.dlg-line{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;padding:12px 14px;border:1px solid var(--line);border-radius:14px;background:#fff}
+.dlg-who{flex:0 0 auto;display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#E8EFF5;color:var(--primary);font-weight:850}
+.dlg-b .dlg-who{background:#F5E3A0;color:#18354B}
+.dlg-text{flex:1 1 160px;min-width:0;font-size:1.25rem;font-weight:800;color:var(--primary);overflow-wrap:anywhere}
+.dlg-roles{border:0;margin:0;padding:0;min-width:0}
+.dlg-choice{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.dlg-radio{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;border:1px solid var(--line);border-radius:12px;background:#fff;font-weight:700;cursor:pointer}
+.dlg-radio input{width:20px;height:20px;accent-color:var(--primary)}
+.dlg-radio:has(input:checked){border-color:var(--primary);background:#EAF2F8}
+.dialogue-activity:has(input[value="a"]:checked) .dlg-line.dlg-a,.dialogue-activity:has(input[value="b"]:checked) .dlg-line.dlg-b{border-color:#B89427;background:#FFF8E1;box-shadow:0 0 0 2px #F5E3A0}
+.dialogue-activity:has(input[value="a"]:checked) .dlg-line.dlg-b,.dialogue-activity:has(input[value="b"]:checked) .dlg-line.dlg-a{opacity:.7}
+.dlg-line,.dlg-radio{box-sizing:border-box;max-width:100%}
