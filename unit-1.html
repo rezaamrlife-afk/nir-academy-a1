@@ -1596,7 +1596,7 @@
 
     <!-- ============ LESSON 1B · GRAMMAR: VERB BE (SINGULAR): HE, SHE, IT ============ -->
     <!-- Same format as the Lesson 1A grammar card. The textbook conversation for 1.20 has not been supplied, so no conversation text or answers are included. -->
-    <div class="activity-card grammar-activity" id="grammar-activity-1b">
+    <div class="activity-card grammar-activity gbe-roleplay" id="grammar-activity-1b">
 
       <div class="grammar-heading">
         <span class="grammar-kicker">GRAMMAR · A1</span>
@@ -1674,12 +1674,17 @@
           <div class="audio-meta"><b>Listening 1.20</b></div>
           <audio controls preload="none" aria-label="Lesson 1B, Listening 1.20"></audio>
         </div>
-        <div class="gbe-conv ph" role="note">
-          <span class="ph-icon" aria-hidden="true">✎</span>
-          <b>Conversation to be added</b>
-          <span>The conversation with blanks for the countries will appear here.</span>
-          <small>Answers are not available yet, so nothing is checked.</small>
-        </div>
+        <ol class="dlg-list gbe-conv-list" aria-label="Conversation with two blanks for the countries">
+          <li class="dlg-line dlg-a"><span class="dlg-who">A</span><span class="dlg-text gbe-text">Wow! Caetano Veloso!</span></li>
+          <li class="dlg-line dlg-b"><span class="dlg-who">B</span><span class="dlg-text gbe-text">Where’s he from?</span></li>
+          <li class="dlg-line dlg-a"><span class="dlg-who">A</span><span class="dlg-text gbe-text">He’s from <input type="text" class="ws-field ws-inline ws-grow gbe-blank" id="gbe-blank-1" aria-label="Blank 1: write the country" autocomplete="off" autocapitalize="words" spellcheck="false"></span></li>
+          <li class="dlg-line dlg-b"><span class="dlg-who">B</span><span class="dlg-text gbe-text">Is Lila Downs from</span></li>
+          <li class="dlg-line dlg-a"><span class="dlg-who">A</span><span class="dlg-text gbe-text">No, she isn’t. She’s from <input type="text" class="ws-field ws-inline ws-grow gbe-blank" id="gbe-blank-2" aria-label="Blank 2: write the country" autocomplete="off" autocapitalize="words" spellcheck="false">, too?</span></li>
+          <li class="dlg-line dlg-b"><span class="dlg-who">B</span><span class="dlg-text gbe-text">Is she good?</span></li>
+          <li class="dlg-line dlg-a"><span class="dlg-who">A</span><span class="dlg-text gbe-text">Yes, she is. Very good.</span></li>
+        </ol>
+        <div class="ws-actions"><button type="button" class="ws-btn" id="gbe-clear">Clear my answers</button></div>
+        <p class="days-hint">Answer checking is not available yet because the answer key has not been added.</p>
       </div>
 
       <div class="grammar-task" id="grammar1b-repeat">
@@ -1724,6 +1729,14 @@
           <li>Student A reads the first part. Student B reads the second part.</li>
           <li>Change roles and practise again.</li>
         </ol>
+        <fieldset class="dlg-roles">
+          <legend class="vocab-sub">Choose your part.</legend>
+          <div class="dlg-choice">
+            <label class="dlg-radio"><input type="radio" name="gbe-role" value="a"> <span>I am A</span></label>
+            <label class="dlg-radio"><input type="radio" name="gbe-role" value="b"> <span>I am B</span></label>
+            <label class="dlg-radio"><input type="radio" name="gbe-role" value="" checked> <span>Show both</span></label>
+          </div>
+        </fieldset>
       </div>
     </div>
 
@@ -2388,6 +2401,9 @@
 <script src="unit-days.js"></script>
 <script src="unit-phrases.js"></script>
 <script src="unit-whereisit.js"></script>
+<script>
+(function(){var b=document.getElementById("gbe-clear");if(!b)return;b.addEventListener("click",function(){Array.prototype.forEach.call(document.querySelectorAll(".gbe-blank"),function(i){i.value="";});var f=document.getElementById("gbe-blank-1");if(f)f.focus();});})();
+</script>
 
 <script>
 (() => {
