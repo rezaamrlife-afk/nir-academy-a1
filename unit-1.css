@@ -460,3 +460,4 @@ dialog.grammar-tips-dialog::backdrop{background:rgba(24,53,75,.55);-webkit-backd
 .gbe-blank{min-width:7ch;width:11ch;max-width:100%;vertical-align:baseline}
 .gbe-roleplay:has(input[name="gbe-role"][value="a"]:checked) .gbe-conv-list .dlg-a,.gbe-roleplay:has(input[name="gbe-role"][value="b"]:checked) .gbe-conv-list .dlg-b{border-color:#B89427;background:#FFF8E1;box-shadow:0 0 0 2px #F5E3A0}
 .gbe-roleplay:has(input[name="gbe-role"][value="a"]:checked) .gbe-conv-list .dlg-b,.gbe-roleplay:has(input[name="gbe-role"][value="b"]:checked) .gbe-conv-list .dlg-a{opacity:.7}
+.be-quiz .ws-line{overflow-wrap:anywhere}.be-quiz .ws-field.ws-inline{box-sizing:border-box;width:min(100%,12ch);min-width:0}.be-quiz-score{margin:0 0 10px}
