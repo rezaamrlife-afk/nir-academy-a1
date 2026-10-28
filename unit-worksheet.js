@@ -4,10 +4,9 @@
    (the first one is shown by "Show answers"). Everything runs locally in the browser; nothing is stored. */
 (function () {
   'use strict';
-  var root = document.getElementById('grammarWorksheet');
+  function init(root, totalEl, resetAll) {
   if (!root) return;
 
-  var totalEl = document.getElementById('wsTotal');
   var allItems = root.querySelectorAll('.ws-item[data-answer]');
 
   /* lower-case, straight apostrophes, no punctuation, single spaces */
@@ -114,7 +113,6 @@
     else if (act === 'clear') clearFlexible(sec);
   });
 
-  var resetAll = document.getElementById('wsResetAll');
   if (resetAll) resetAll.addEventListener('click', function () {
     Array.prototype.forEach.call(root.querySelectorAll('.ws-section[data-ws-section]:not(.ws-flex)'), function (s) { reset(s, false); });
   });
@@ -141,4 +139,9 @@
   });
 
   updateTotal();
+  }
+
+  /* Lesson 1A worksheet (original ids) and Lesson 1B worksheet */
+  init(document.getElementById('grammarWorksheet'), document.getElementById('wsTotal'), document.getElementById('wsResetAll'));
+  init(document.getElementById('grammarWorksheet1b'), document.getElementById('wsTotal1b'), document.getElementById('wsResetAll1b'));
 })();
