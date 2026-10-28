@@ -3,13 +3,22 @@
    - HTML, CSS and JS use "network first, cache as fallback", so deployed updates show up
      as soon as the device is online (no stale app).
    - Audio and other range requests are never cached. */
-var CACHE = 'nir-a1-v1';
+var CACHE = 'nir-a1-v2';
 var SHELL = [
   './',
   'index.html',
   'unit-1.html',
   'unit-1.css',
   'unit-1.js',
+  'unit-notes.css',
+  'unit-notes.js',
+  'unit-worksheet.js',
+  'unit-listen-check.js',
+  'unit-say.js',
+  'unit-days.js',
+  'unit-phrases.js',
+  'unit-whereisit.js',
+  'unit-be-quiz.js',
   'pwa.js',
   'manifest.webmanifest',
   'icon-180.png',
