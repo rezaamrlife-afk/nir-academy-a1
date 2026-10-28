@@ -461,3 +461,14 @@ dialog.grammar-tips-dialog::backdrop{background:rgba(24,53,75,.55);-webkit-backd
 .gbe-roleplay:has(input[name="gbe-role"][value="a"]:checked) .gbe-conv-list .dlg-a,.gbe-roleplay:has(input[name="gbe-role"][value="b"]:checked) .gbe-conv-list .dlg-b{border-color:#B89427;background:#FFF8E1;box-shadow:0 0 0 2px #F5E3A0}
 .gbe-roleplay:has(input[name="gbe-role"][value="a"]:checked) .gbe-conv-list .dlg-b,.gbe-roleplay:has(input[name="gbe-role"][value="b"]:checked) .gbe-conv-list .dlg-a{opacity:.7}
 .be-quiz .ws-line{overflow-wrap:anywhere}.be-quiz .ws-field.ws-inline{box-sizing:border-box;width:min(100%,12ch);min-width:0}.be-quiz-score{margin:0 0 10px}
+/* lesson 1B: pronunciation + he/she */
+.hs-list{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:12px}
+.hs-pair{position:relative;padding:12px 14px 12px 48px;border:1px solid var(--line);border-radius:14px;background:#fff;box-sizing:border-box;min-width:0}
+.hs-pair .phrase-num{top:18px;transform:none}
+.hs-lines{display:grid;gap:8px}
+.hs-line{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;padding:6px 8px;border-radius:10px}
+.hs-line .goodbye-phrase{flex:1 1 170px;min-width:0;font-size:1.15rem}
+.hs-letter{display:grid;place-items:center;width:26px;height:26px;border-radius:8px;background:#F5E3A0;color:#18354B;font-weight:850}
+.hs-line.is-done{background:#F1FAF5}
+.heshe-activity em{font-style:normal;color:var(--gold2)}
+@media(max-width:480px){.hs-pair{padding-left:44px}.hs-line .phrase-done{margin-left:auto}}
