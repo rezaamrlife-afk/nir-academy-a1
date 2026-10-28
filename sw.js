@@ -19,6 +19,7 @@ var SHELL = [
   'unit-phrases.js',
   'unit-whereisit.js',
   'unit-be-quiz.js',
+  'unit-pron-1b.js',
   'pwa.js',
   'manifest.webmanifest',
   'icon-180.png',
