@@ -197,8 +197,41 @@ html.large-text .homebox h4{font-size:22px}
 html.large-text .stat strong{font-size:25px}
 @media(max-width:760px){html.large-text .hero h1{font-size:44px}html.large-text .sectionhead h2{font-size:27px}html.large-text .stat strong{font-size:23px}}
 </style>
+<style id="appSplashCss">
+/* In-app start screen (shown only when the app is opened from the home screen) */
+.app-splash{position:fixed;inset:0;z-index:100;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:24px;text-align:center;background:#F0F7FC;color:#18354B;opacity:1;transition:opacity .45s ease}
+.app-splash[hidden]{display:none}
+.app-splash.is-out{opacity:0;pointer-events:none}
+.app-splash-logo{display:grid;place-items:center;width:84px;height:84px;border-radius:24px;background:linear-gradient(135deg,#d9bb55,#B89427);color:#18354B;font-size:44px;font-weight:900;box-shadow:0 14px 34px rgba(24,53,75,.18)}
+.app-splash b{font-size:1.35rem;letter-spacing:.06em}
+.app-splash span{font-size:.95rem;color:#4A6479}
+.app-splash em{font-style:normal;font-size:1.05rem;font-weight:700;color:#8A6D12;letter-spacing:.02em}
+@media(prefers-reduced-motion:reduce){.app-splash{transition:none}}
+</style>
 </head>
 <body>
+<div class="app-splash" id="appSplash" aria-hidden="true" hidden>
+  <div class="app-splash-logo">N</div>
+  <b>NIR Academy</b>
+  <span>A1 English</span>
+  <em>Dr. Niki Majidi</em>
+</div>
+<script>
+(function(){
+  try{
+    var standalone=(window.matchMedia&&window.matchMedia('(display-mode: standalone)').matches)||window.navigator.standalone===true;
+    var seen=false; try{seen=sessionStorage.getItem('nirSplashSeen')==='1';}catch(e){}
+    var el=document.getElementById('appSplash');
+    if(!el||!standalone||seen){ if(el&&el.parentNode)el.parentNode.removeChild(el); return; }
+    try{sessionStorage.setItem('nirSplashSeen','1');}catch(e){}
+    el.hidden=false;
+    var done=false;
+    function hide(){ if(done)return; done=true; el.classList.add('is-out'); setTimeout(function(){ if(el.parentNode)el.parentNode.removeChild(el); },500); }
+    el.addEventListener('click',hide);
+    setTimeout(hide,1100);
+  }catch(e){ var x=document.getElementById('appSplash'); if(x&&x.parentNode)x.parentNode.removeChild(x); }
+})();
+</script>
 <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
 <div class="app">
 <aside class="sidebar" id="sidebar">
