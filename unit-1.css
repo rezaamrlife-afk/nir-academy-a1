@@ -455,3 +455,8 @@ dialog.grammar-tips-dialog::backdrop{background:rgba(24,53,75,.55);-webkit-backd
 .wi-activity .ws-actions{margin-top:12px}
 /* lesson 1B: grammar be (he, she, it) */
 .gbe-conv.ph{margin-top:12px}
+/* lesson 1B grammar: conversation 1.20 with blanks */
+.gbe-conv-list .dlg-text{font-size:1.15rem;line-height:1.9}
+.gbe-blank{min-width:7ch;width:11ch;max-width:100%;vertical-align:baseline}
+.gbe-roleplay:has(input[name="gbe-role"][value="a"]:checked) .gbe-conv-list .dlg-a,.gbe-roleplay:has(input[name="gbe-role"][value="b"]:checked) .gbe-conv-list .dlg-b{border-color:#B89427;background:#FFF8E1;box-shadow:0 0 0 2px #F5E3A0}
+.gbe-roleplay:has(input[name="gbe-role"][value="a"]:checked) .gbe-conv-list .dlg-b,.gbe-roleplay:has(input[name="gbe-role"][value="b"]:checked) .gbe-conv-list .dlg-a{opacity:.7}
