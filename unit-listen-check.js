@@ -10,6 +10,8 @@
     var radios = Array.prototype.slice.call(box.querySelectorAll('input[type="radio"]'));
     var feedback = box.querySelector('.lc-feedback');
     var correct = (box.getAttribute('data-correct') || '').trim();
+    var noun = box.getAttribute('data-lc-noun') || 'photo';
+    var Noun = noun.charAt(0).toUpperCase() + noun.slice(1);
     var hasKey = !!correct && radios.some(function (r) { return r.value === correct; });
 
     function optionOf(radio) { return radio.closest('.vp-option') || radio.parentNode; }
@@ -34,18 +36,18 @@
     function check() {
       clearMarks();
       var sel = selected();
-      if (!sel) { say('Choose a photo first, then press Check answer.', 'info'); return; }
+      if (!sel) { say('Choose a ' + noun + ' first, then press Check answer.', 'info'); return; }
       if (!hasKey) {
-        say('Photo ' + sel.value + ' selected. The answer key for this activity has not been added yet, so it cannot be checked.', 'info');
+        say(Noun + ' ' + sel.value + ' selected. The answer key for this activity has not been added yet, so it cannot be checked.', 'info');
         return;
       }
       if (sel.value === correct) {
         optionOf(sel).classList.add('is-correct');
-        say('✓ Correct! Photo ' + sel.value + ' is right.', 'ok');
+        say('✓ Correct! ' + Noun + ' ' + sel.value + ' is right.', 'ok');
       } else {
         optionOf(sel).classList.add('is-wrong');
         sel.setAttribute('aria-invalid', 'true');
-        say('✗ Not quite. Listen again and try another photo.', 'bad');
+        say('✗ Not quite. Listen again and try another ' + noun + '.', 'bad');
       }
     }
     function reset() {
