@@ -485,3 +485,25 @@ dialog.grammar-tips-dialog::backdrop{background:rgba(24,53,75,.55);-webkit-backd
 .hs-write-row .ws-field{flex:1 1 200px;min-width:0;box-sizing:border-box;width:auto;max-width:420px}
 .hs-write-row .ws-field[readonly]{background:#EEF3F7;color:var(--muted)}
 .sp-example .dlg-line{margin-top:8px}
+/* practical english: alphabet + classroom */
+.alpha-grid{list-style:none;margin:14px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:8px}
+.alpha-btn{display:grid;place-items:center;width:100%;min-height:48px;padding:0 6px;border:1px solid #BFD1DF;border-radius:12px;background:#fff;color:var(--primary);font:inherit;font-size:1.25rem;font-weight:850;cursor:pointer}
+.alpha-btn:hover{border-color:var(--gold)}
+.alpha-btn:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.alpha-key{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:1.6rem}
+.alpha-chips{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.alpha-chips .alpha-btn{width:52px}
+.alpha-pairs{list-style:none;margin:12px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,170px),1fr));gap:10px}
+.alpha-pair{display:flex;align-items:center;gap:8px;padding:8px 10px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.alpha-pair .alpha-btn{width:52px}
+.alpha-pair .phrase-num{position:static;transform:none;flex:0 0 auto}
+.alpha-check{margin:10px 0 0;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:#fff;min-width:0;box-sizing:border-box;display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px}
+.alpha-check legend{font-weight:850;padding:0 6px}
+.alpha-check .lc-feedback{flex:0 0 100%;margin:0}
+.alpha-acrs{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:8px}
+.alpha-acr details{border:1px solid var(--line);border-radius:12px;background:#fff;padding:0 12px}
+.alpha-acr summary{display:flex;align-items:center;gap:10px;min-height:48px;cursor:pointer;font-weight:700}
+.alpha-acr .phrase-num{position:static;transform:none}
+.alpha-acr-body{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:0 0 12px}
+.alpha-acr-body b{font-size:1.5rem;letter-spacing:.12em;color:var(--primary)}
+.alpha-check .ws-choice span{min-width:52px;text-align:center}
